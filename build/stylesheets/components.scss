@@ -36,8 +36,7 @@
 }
 
 
-@mixin section-title($font-size) {
-  font-size: $font-size;
+@mixin section-title() {
   border-bottom: 1px solid black;
   margin-bottom: 0.8em;
 }

@@ -31,13 +31,17 @@ a , a:hover, a:active, a:visited {
 .outer-container {
   @include outer-container();
 }
-article {
-  @include pad();
+
+.header {
+  margin-bottom: 1em;
+}
+
+article,
+.title {
+  padding: 5px;
 }
 
 .title {
-  @include pad();
-
   &--left {
     @include span-columns(8);
   }
@@ -55,43 +59,54 @@ article {
     font-size: $small-font-size;
   }
   &--break {
-    margin-bottom: 1.5em;
+    margin-bottom: $margin-bottom-large;
   }
   &--attr {
-    border-bottom: 1px dotted black;
     margin-bottom: 0.5em;
+    @include outer-container;
   }
   &--attr:last-child {
     border-bottom: 0;
   }
+  &--attr__left {
+    @include span-columns(2);
+    padding-top: 5px;
+  }
+  &--attr__right {
+    @include span-columns(10);
+    margin-right: 0;
+    border-bottom: 1px dotted black;
+  }
+  &--attr__title {
+    padding-top: 0.5em;
+  }
 }
 
-.profile,
-.education,
-.work,
-.volunteering {
+.main-left {
   @include span-columns(8);
 }
-
-.projects,
-.links {
+.main-right {
   @include span-columns(4);
   margin-right: 0;
 }
 
+.main--title {
+  font-size: $medium-font-size;
+}
+
 .profile {
   &--title {
-    @include section-title($medium-font-size);
+    @include section-title();
   }
 }
 
 .education {
   &--title {
-    @include section-title($medium-font-size);
+    @include section-title();
   }
   &--school {
     @include outer-container;
-    margin-bottom: 1.5em;    
+    margin-bottom: $margin-bottom-large;    
   }
   &--school__left {
     @include span-columns(3);
@@ -105,17 +120,20 @@ article {
     display: block;
   }
   &--school__degree {
-    margin-bottom: 0.5em;
+    margin-bottom: $margin-bottom-small;
   }
 }
 
 .work {
   &--title {
-    @include section-title($medium-font-size);
+    @include section-title();
   }
   &--company {
     @include outer-container;
-    margin-bottom: 1.5em;
+    margin-bottom: $margin-bottom-large;
+  }
+  &--company:last-child {
+    margin-bottom: 0;
   }
   &--company__left {
     @include span-columns(3);
@@ -129,22 +147,134 @@ article {
     display: block;
     margin-bottom: 0.5em;
   }
+  &--desc__skills {
+    font-size: $small-font-size
+  }
 }
 
 .volunteering {
   &--title {
-    @include section-title($medium-font-size);
+    @include section-title();
+  }
+  &--event {
+    margin-bottom: $margin-bottom-large;
+  }
+  &--event__left {
+    @include span-columns(4);
+  }
+  &--event__right {
+    @include span-columns(8);
+    margin-right: 0;
+  }
+  &--event__name,
+  &--event__role {
+    display: block;
+    margin-bottom: $margin-bottom-small;
   }
 }
 
 .projects {
   &--title {
-    @include section-title($medium-font-size);
+    @include section-title();
+  }
+  &--build {
+    margin-bottom: $margin-bottom-large;
+  }
+  &--build__name {
+    display: block;
+  }
+  &--build__skill {
+    display: inline;
+  }
+  &--build__skill + &--build__skill:before {
+    content: "/ ";
+  }
+  &--build__name,
+  &--build__skills {
+    margin-bottom: $margin-bottom-small;
   }
 }
 
 .links {
   &--title {
-    @include section-title($medium-font-size);
+    @include section-title();
+  }
+  &--website {
+    margin-bottom: $margin-bottom-large;
+  }
+  &--website__name,
+  &--website__site {
+    display: block;
+    margin-bottom: $margin-bottom-small;
+  }
+}
+
+@media print {
+  $large-font-size: 3em;
+  $medium-font-size: 1.15em;
+  $small-font-size: 0.75em;
+
+  .title {
+    &--left {
+      @include span-columns(7);
+    }
+    &--right {
+      @include span-columns(5);
+      margin-right: 0;
+    }
+    &--break {
+      margin-bottom: 0.25em;
+    }
+    &--desc__name {
+      font-size: $large-font-size;
+      margin-bottom: 0.5em;
+    }
+    &--desc__subtitle {
+      font-size: $medium-font-size;
+    }
+    &--desc__address {
+      font-size: $small-font-size;
+    }
+    &--attr {
+      margin-bottom: 0.1em;
+    }
+    &--attr__left {
+      font-size: 0.75em;
+    }
+  }
+  .main-left {
+  @include span-columns(7);
+  }
+  .main-right {
+    @include span-columns(5);
+    margin-right: 0;
+  }
+  .main--title {
+    font-size: $medium-font-size;
+  }
+  .profile--desc__text,
+  .work--desc__summary {
+    font-size: $small-font-size;
+  }
+  .education {
+    &--school {
+      margin-bottom: 0.5em;    
+    }
+  }
+  .work {
+    &--company {
+      margin-bottom: 0.5em;
+    }
+    &--company:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .volunteering {
+    &--event {
+      margin-bottom: 0.5em;
+    }
+  }
+  .no-print {
+    display: none;  
   }
 }
