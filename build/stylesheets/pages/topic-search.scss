@@ -1,0 +1,137 @@
+/* ============================================
+  Concept Search Error Page
+============================================ */
+// error page
+.header-error {
+  @include font-bold(32px);
+}
+// navigation
+.view-nav {
+  @include outer-container();
+  margin-bottom:20px;
+
+  .view-nav-list {
+    @include span-columns(4 of 12);
+    @include media($mobile-menu-item) {
+      @include span-columns(12);
+      margin: 5px 0;
+    }
+    display: inline-block;
+    text-align: center;
+
+    button {
+      @include card(1);
+      background-color: $light-primary-color;
+      color: $primary-text-color;
+      width: 100%;
+      border-radius: 2px;
+
+      &:hover, &.active {
+        background-color: $dark-primary-color;
+      }
+      &:focus {
+        outline: none;
+      }
+      &.active {
+        @include card(0);
+      }
+    }
+  }
+}
+
+// Attributes
+
+.topic-view-action-item {
+  @include span-columns(4 of 12);
+
+  @include media($mobile-menu-item) {
+    @include span-columns(12);
+  }
+
+  button {
+    background-color: $green;
+    @include card(2);
+    @include media($mobile-menu-item) {
+      width: 100%;
+    }
+
+    &:hover {
+      background-color: darken($green, 20%);
+    }
+
+    &:active {
+      @include card(0);
+    }
+  }
+}
+
+.topic-external-attribute {
+  &:hover {
+    color: $primary-color;
+  }
+}
+
+.search-attributes {
+  @include outer-container();
+  .search-attributes-info {
+    @include span-columns(8 of 12);
+    @include card(1);
+    padding: 20px;
+    border-radius: 2px;
+    .search-attributes-header {
+      @include font-bold(32px);
+      margin-bottom: 10px;
+    }
+  }
+  .search-attributes-article {
+    header {
+      @include font-medium(24px);
+      margin-bottom: 0.5em;
+    }
+  }
+  .search-attributes-article:not(#search-attributes-id) {
+    header {
+      margin-top: 1.75em;
+    }
+  }
+  .search-attributes-image {
+    @include span-columns(4 of 12);
+    @include card(1);
+    border-radius: 2px;
+    padding: 5px;
+  }
+}
+
+// Forms
+.view-topics-forms {
+  .view-topics-forms-item {
+    @include row();
+    margin-bottom: 25px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .view-topics-forms-header {
+    @include font-medium-bold(32px);
+    line-height: 36px;
+  }
+}
+
+// Related Topics
+.topic-list {
+  @include outer-container();
+  .topic-list-item {
+    @include span-columns(4);
+    @include omega(3n);
+    height: 5em;
+  }
+  .topic-list-only-item {
+    @include span-columns(4);
+    @include omega(3n);
+  }
+}
+.rels-indicator {
+  height: 5px;
+  @include card(1);
+  background-color: $green;
+}

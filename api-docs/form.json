@@ -1,0 +1,387 @@
+{
+    "apiVersion": "1.0",
+    "apis": [
+        {
+            "operations": [
+                {
+                    "deprecated": false,
+                    "items": {
+                        "$ref": "CuratedForm"
+                    },
+                    "method": "GET",
+                    "nickname": "formSearchGet",
+                    "notes": "",
+                    "parameters": [
+                        {
+                            "name": "formName",
+                            "paramType": "query",
+                            "required": true,
+                            "type": "string"
+                        }
+                    ],
+                    "position": 0,
+                    "summary": "Searches forms in the graph",
+                    "type": "array"
+                }
+            ],
+            "path": "/form/search"
+        }
+    ],
+    "basePath": "http://rack2:8000/api",
+    "consumes": [
+        "application/json"
+    ],
+    "models": {
+        "CuratedForm": {
+            "id": "CuratedForm",
+            "name": "CuratedForm",
+            "properties": {
+                "formTopics": {
+                    "items": {
+                        "$ref": "CuratedFormTopic"
+                    },
+                    "position": 0,
+                    "type": "array"
+                },
+                "lp": {
+                    "format": "float",
+                    "position": 0,
+                    "type": "number"
+                },
+                "name": {
+                    "position": 0,
+                    "type": "string"
+                },
+                "originalName": {
+                    "position": 0,
+                    "type": "string"
+                },
+                "tf": {
+                    "format": "int64",
+                    "position": 0,
+                    "type": "integer"
+                },
+                "topics": {
+                    "items": {
+                        "$ref": "FormTopic"
+                    },
+                    "position": 0,
+                    "type": "array"
+                }
+            },
+            "qualifiedType": "com.reverb.topic.graph.model.CuratedForm",
+            "required": [
+                "name"
+            ]
+        },
+        "CuratedFormTopic": {
+            "id": "CuratedFormTopic",
+            "name": "CuratedFormTopic",
+            "properties": {
+                "form": {
+                    "$ref": "CuratedForm",
+                    "position": 0
+                },
+                "formName": {
+                    "position": 0,
+                    "type": "string"
+                },
+                "linkProbability": {
+                    "format": "float",
+                    "position": 0,
+                    "type": "number"
+                },
+                "senseProbability": {
+                    "format": "float",
+                    "position": 0,
+                    "type": "number"
+                },
+                "topic": {
+                    "$ref": "CuratedTopic",
+                    "position": 0
+                },
+                "topicName": {
+                    "position": 0,
+                    "type": "string"
+                }
+            },
+            "qualifiedType": "com.reverb.topic.graph.model.CuratedFormTopic",
+            "required": []
+        },
+        "CuratedTopic": {
+            "id": "CuratedTopic",
+            "name": "CuratedTopic",
+            "properties": {
+                "cs": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "position": 0,
+                    "type": "array"
+                },
+                "formTopics": {
+                    "items": {
+                        "$ref": "CuratedFormTopic"
+                    },
+                    "position": 0,
+                    "type": "array"
+                },
+                "forms": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "position": 0,
+                    "type": "array"
+                },
+                "id": {
+                    "position": 0,
+                    "type": "string"
+                },
+                "ilrels": {
+                    "items": {
+                        "$ref": "RelatedTopic"
+                    },
+                    "position": 0,
+                    "type": "array"
+                },
+                "ils": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "position": 0,
+                    "type": "array"
+                },
+                "isBlockListed": {
+                    "position": 2,
+                    "type": "boolean"
+                },
+                "lastUpdated": {
+                    "format": "int64",
+                    "position": 0,
+                    "type": "integer"
+                },
+                "location": {
+                    "$ref": "Location",
+                    "position": 0
+                },
+                "name": {
+                    "position": 0,
+                    "type": "string"
+                },
+                "netypes": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "position": 0,
+                    "type": "array"
+                },
+                "ols": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "position": 0,
+                    "type": "array"
+                },
+                "originalName": {
+                    "position": 1,
+                    "type": "string"
+                },
+                "originalTopic": {
+                    "$ref": "Topic",
+                    "position": 0
+                },
+                "rels": {
+                    "items": {
+                        "$ref": "RelatedTopic"
+                    },
+                    "position": 0,
+                    "type": "array"
+                },
+                "sourceOfConcept": {
+                    "position": 3,
+                    "type": "string"
+                }
+            },
+            "qualifiedType": "com.reverb.topic.graph.model.CuratedTopic",
+            "required": [
+                "name",
+                "originalName",
+                "isBlockListed",
+                "sourceOfConcept",
+                "id"
+            ]
+        },
+        "FormTopic": {
+            "id": "FormTopic",
+            "name": "FormTopic",
+            "properties": {
+                "name": {
+                    "position": 0,
+                    "type": "string"
+                },
+                "serializedSize": {
+                    "format": "int32",
+                    "position": 0,
+                    "type": "integer"
+                },
+                "sp": {
+                    "format": "float",
+                    "position": 1,
+                    "type": "number"
+                }
+            },
+            "qualifiedType": "com.reverb.topic.graph.protobuf.graph.FormTopic",
+            "required": [
+                "name",
+                "sp",
+                "serializedSize"
+            ]
+        },
+        "Location": {
+            "id": "Location",
+            "name": "Location",
+            "properties": {
+                "lat": {
+                    "format": "float",
+                    "position": 0,
+                    "type": "number"
+                },
+                "long": {
+                    "format": "float",
+                    "position": 1,
+                    "type": "number"
+                },
+                "serializedSize": {
+                    "format": "int32",
+                    "position": 0,
+                    "type": "integer"
+                }
+            },
+            "qualifiedType": "com.reverb.topic.graph.protobuf.graph.Location",
+            "required": [
+                "lat",
+                "long",
+                "serializedSize"
+            ]
+        },
+        "RelatedTopic": {
+            "id": "RelatedTopic",
+            "name": "RelatedTopic",
+            "properties": {
+                "name": {
+                    "position": 0,
+                    "type": "string"
+                },
+                "score": {
+                    "format": "float",
+                    "position": 1,
+                    "type": "number"
+                },
+                "serializedSize": {
+                    "format": "int32",
+                    "position": 0,
+                    "type": "integer"
+                }
+            },
+            "qualifiedType": "com.reverb.topic.graph.protobuf.graph.RelatedTopic",
+            "required": [
+                "name",
+                "score",
+                "serializedSize"
+            ]
+        },
+        "Topic": {
+            "id": "Topic",
+            "name": "Topic",
+            "properties": {
+                "cs": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "position": 4,
+                    "type": "array"
+                },
+                "forms": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "position": 9,
+                    "type": "array"
+                },
+                "id": {
+                    "position": 5,
+                    "type": "string"
+                },
+                "ilrels": {
+                    "items": {
+                        "$ref": "RelatedTopic"
+                    },
+                    "position": 7,
+                    "type": "array"
+                },
+                "ils": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "position": 2,
+                    "type": "array"
+                },
+                "location": {
+                    "$ref": "Location",
+                    "position": 0
+                },
+                "name": {
+                    "position": 0,
+                    "type": "string"
+                },
+                "netype": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "position": 1,
+                    "type": "array"
+                },
+                "ols": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "position": 3,
+                    "type": "array"
+                },
+                "rels": {
+                    "items": {
+                        "$ref": "RelatedTopic"
+                    },
+                    "position": 8,
+                    "type": "array"
+                },
+                "serializedSize": {
+                    "format": "int32",
+                    "position": 0,
+                    "type": "integer"
+                }
+            },
+            "qualifiedType": "com.reverb.topic.graph.protobuf.graph.Topic",
+            "required": [
+                "name",
+                "netype",
+                "ils",
+                "ols",
+                "cs",
+                "id",
+                "ilrels",
+                "rels",
+                "forms",
+                "serializedSize"
+            ]
+        }
+    },
+    "produces": [
+        "application/json"
+    ],
+    "protocols": [
+        "http"
+    ],
+    "resourcePath": "/form",
+    "swaggerVersion": "1.2"
+}

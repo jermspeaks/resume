@@ -1,0 +1,381 @@
+/* ============================================
+  Imports
+============================================ */
+
+@import '../components';
+
+/* ============================================
+  Concept New/Edit Page
+============================================ */
+.new-topic-name-input-button {
+  @include span-columns(2 of 12);
+  @include omega(n);
+}
+.new-topic-name-input-item {
+  @include span-columns(10 of 12);
+  @include omega(2n);
+  label, input {
+    display: inline-block;
+  }
+  input {
+    width: 75% !important;
+    &:focus {
+      outline: none;
+    }
+
+    @include media(max-width 875px) {
+      width: 50%;
+    }
+  }
+  .ng-messages {
+    margin-left: 4.5em;
+  }
+}
+
+.concept-new-helper-text {
+  @include font-light(48px);
+  line-height: 56px;
+  text-align: center;
+  color: $red;
+}
+
+$menu-button-color: #f7f7f7;
+$sub-menu-button-color: darken($menu-button-color, 20%);
+
+.concept-form-section {
+  padding-top: 10px;
+
+  .concept-side-menu {
+    @include outer-container();
+    @include row();
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: rgba(0,0,0,0);
+
+
+    .side-menu-nav-list {
+
+      .side-menu-item {
+        @include span-columns(4 of 12);
+        display: inline-block;
+        text-align: center;
+
+        button {
+          @include card(1);
+          background-color: $light-primary-color;
+          color: $primary-text-color;
+          width: 100%;
+          border-radius: 2px;
+
+          &:hover, &.active {
+            background-color: $dark-primary-color;
+          }
+          &:focus {
+            outline: none;
+          }
+          &.active {
+            @include card(0);
+          }
+        }
+      }
+    }
+
+
+    ul.search-function-list {
+      border-top: 2px solid black;
+    }
+
+    ul.submenu {
+      display: none;
+    }
+
+    li.side-submenu-item {
+      @include row();
+
+      border-bottom: 1px solid #a0a0a0;
+      button {
+        background-color: $sub-menu-button-color;
+        color: black;
+        width: 100%;
+        border-radius: 0;
+        @include font-medium(14px);
+      }
+
+      button:hover {
+        background-color: #999;
+      }
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+
+  }
+
+  #concept-partial-form {
+    @include row();
+  }
+}
+
+.concept-header {
+  @extend .secondary-header;
+}
+
+section#new-concept-viz {
+  margin: 10px 0;
+
+  header#new-concept-viz-header {
+    @include font-medium-bold(24px);
+  }
+}
+
+div.field {
+  @include row();
+}
+
+.input-field {
+  @include span-columns(6 of 12);
+}
+
+.new-topic-netype-list-item{
+  @include tag(14px, white, $green);
+}
+
+.netype-warning {
+  display: none;
+}
+
+section#disabled-lat-long {
+  .lat-long-coordinates {
+    @include span-columns(6);
+  }
+}
+
+.related-concepts,
+.related-forms {
+  fieldset.form-field,
+  .related-concepts-item {
+    @include span-columns(11);
+    input {
+      padding: 0.65em;
+    }
+  }
+  button {
+    @include span-columns(1);
+    margin-right: 0;
+  }
+  button.delete-button {
+    background: #f66;
+  }
+  button.delete-button:hover {
+    background: darken(#FF6666, 20%);
+  }
+}
+
+label.concept-name-label {
+  float: left;
+}
+
+button.add-related-concept-button {
+  margin-top: 0 !important;
+  float: right;
+}
+
+.concept-search-bar {
+  margin: 20px 0;
+}
+
+input[data-default="Add a category"] {
+  width: 100px !important;
+}
+
+// Search Button
+.corner-button {
+	// position: relative;
+	// bottom: 3vh;
+	// left: 1vw;
+
+  .search-button {
+    @include paper-button(60px, $accent-color);
+  }
+  .search-button:hover{
+    @include paper-button(60px, darken($accent-color, 20%));
+  }
+  .fa-search {
+    color: white;
+    position: relative;
+    top: -2px;
+  }
+}
+// Related Forms Statistics Inputs
+.related-forms-stat-dropdown span,
+.related-forms-link-dropdown span,
+.filter-forms-header span {
+    vertical-align: super;
+}
+
+.caret-down,
+.related-forms-caret-down {
+  cursor: pointer;
+  -moz-transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  color: $dark-gray;
+  &.up {
+    -ms-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+}
+.filter-remove-form {
+  cursor: pointer;
+  color: $red;
+}
+.related-forms-stat {
+  @include row();
+  display: none;
+  .related-forms-stat-item {
+    @include span-columns(6 of 12);
+  }
+}
+
+// Linked Forms
+.link-container {
+  @include card(1);
+  background-color: #FAFAFA;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+.link-forms-header {
+  @include font-bold(24px);
+  text-align: center;
+  line-height: 24px;
+  margin-bottom: 15px;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+}
+.link-forms-stat {
+  @extend .related-forms-stat;
+  display: inherit;
+  .link-forms-stat-item {
+      @include span-columns(6 of 12);
+  }
+}
+
+// Related Topics
+.no-related-topics-message {
+  @include font-light(36px);
+  text-align: center;
+  padding: 20px 0;
+}
+
+// search topics
+.concept-new-search-section {
+  @include outer-container(100%);
+  @include row();
+  .concept-new-search-area {
+    @include span-columns(7 of 12);
+    margin-bottom: 20px;
+  }
+  .concept-new-search-list {
+    @include span-columns(5 of 12);
+  }
+}
+// Right side bar of current related topics
+.current-related-topics {
+  @include secondary-left-header(20px);
+  margin: 5px 0 20px;
+}
+.related-concepts-input {
+  @include outer-container();
+  .related-concepts-item {
+    @include span-columns(10 of 12);
+  }
+  .delete-button {
+    @include span-columns(2 of 12);
+  }
+}
+// Main forms list container
+.form-list-container {
+  margin: 20px 0;
+}
+.results-topics {
+  .results-form-block {
+    @include row();
+    margin-bottom: 25px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .results-form-header {
+    @include font-medium-bold(16px);
+    line-height: 26px;
+  }
+  ul li {
+    display: inline-block;
+    .topic-tag {
+      @include tag(12px, white, $green);
+      &:hover {
+        @include tag(12px, white, darken($green, 20%));
+      }
+    }
+  }
+}
+.results-topics-header {
+  @include font-medium(32px);
+  padding: 10px 0;
+}
+.related-topics-list {
+  ul {
+    li {
+      @include outer-container();
+      @include row();
+      @include font-medium(16px);
+      line-height: 24px;
+      padding: 10px 0;
+      border-bottom: 1px dotted $divider-color;
+      span {
+        overflow: hidden;
+        @include span-columns(10 of 12);
+      }
+      button {
+        background-color: $red;
+        margin: 0;
+        @include span-columns(2 of 12);
+      }
+    }
+  }
+}
+.search-list-use-topic {
+  color: darken($green, 20%);
+
+  &:hover {
+    color: darken($green, 40%);
+  }
+  .icon-plus-square{
+    font-size: 1.5em;
+    vertical-align: sub;
+    line-height: 2em;
+  }
+}
+.search-list-topic-title {
+  @include font-medium(18px);
+}
+.filtered-form-list {
+  margin: 20px 0;
+
+  .filtered-form-item {
+    display:inline !important;
+    line-height: 1.5em;
+    // padding-right: 50px;
+    &:after {
+      content: "\A";
+      white-space: pre;
+    }
+    .view-filtered-form:hover {
+      cursor: pointer;
+      color: $primary-color;
+    }
+  }
+}

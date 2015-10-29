@@ -1,0 +1,65 @@
+/* ============================================
+  Main
+============================================ */
+// Header
+.header-content {
+  @include primary-header(56px);
+  background-color: $primary-color;
+  color: $primary-text-color;
+}
+// Main Content
+.main-content,
+.graph-generation-status {
+  margin: 20px 30px;
+}
+// Navigation
+#main-menu {
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    li {
+      font-size: 20px;
+      .main-menu-item {
+        @include span-columns(6);
+        display: inline;
+        margin: 10px 10px;
+        padding: 25px 0;
+        @include card(1);
+        border-radius: 2px;
+        text-align: center;
+        background: #f0efec;
+        cursor: pointer;
+        // Breakpoint
+        @include media($mobile-menu-item) {
+          @include span-columns(12);
+          margin: 10px 0;
+        }
+        span {
+          vertical-align: middle;
+        }
+      }
+      .main-menu-item:hover {
+        color: white;
+        background: #484746;
+        @include card(0);
+        @include transition(color 0.3s ease-in 0s, background 0.3s ease-in 0s);
+      }
+    }
+  }
+}
+// Graph Generation Status
+.graph-generation-status {
+  .graph-generation-message {
+    @include font-medium(32px);
+    line-height: 48px;
+    text-align: center;
+  }
+  img {
+    display: block;
+    margin: auto;
+    padding: 5px;
+    border-radius: 2px;
+    @include card(1);
+  }
+}

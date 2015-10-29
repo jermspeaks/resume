@@ -1,0 +1,47 @@
+/* ============================================
+  Imports
+============================================ */
+@import '../components';
+
+/* ============================================
+  Concept Edit Page
+============================================ */
+.topic-name-input-group {
+  @include outer-container();
+  @include row();
+
+  .topic-name-input-button {
+    @include span-columns(2 of 12);
+    @include omega(n);
+  }
+  .topic-name-input-item {
+    @include span-columns(8 of 12);
+    @include omega(2n);
+    label, input {
+      display: inline-block;
+    }
+    input {
+      width: 90%;
+      @include media(max-width 875px) {
+        width: 50%;
+      }
+    }
+  }
+
+  @include media(max-width 875px) {
+    display: flex;
+    #edit-view-topic {
+      order: 2;
+      flex-grow: 1;
+    }
+    #edit-topic-input {
+      order: 1;
+      flex-grow: 2;
+    }
+
+    #edit-topic-submit {
+      order: 3;
+      flex-grow: 1;
+    }
+  }
+}

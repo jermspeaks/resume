@@ -1,0 +1,84 @@
+// Components
+
+@import "bourbon";
+@import "assets/neat/neat";
+@import "assets/neat/neat-helpers";
+@import "assets/base/base";
+
+@import "components/headers";
+@import "components/fonts";
+@import "components/buttons";
+@import "components/paper-button";
+@import "components/indicator";
+@import "components/cards";
+@import "components/checklist";
+@import "components/tag-input";
+@import "components/toggle-button";
+@import "components/dropdown";
+@import "components/tags";
+@import "components/info";
+@import "components/loader";
+
+
+@import "var";
+
+/* ============================================
+  Form ng-messages Styles
+============================================ */
+.ng-messages {
+  @include font-medium-bold(12px);
+  color: red;
+  margin: 0 0 10px 0;
+}
+/* ============================================
+  Floats
+============================================ */
+.float-left {
+  float: left;
+}
+.float-right {
+  float: right;
+}
+.clear-float {
+  clear: both;
+}
+/* ============================================
+  Google Maps
+============================================ */
+.gmnoprint img {
+  max-width: none;
+}
+/* ============================================
+  d3 Concept Preview
+============================================ */
+.node {
+  circle {
+    fill: #fff;
+    stroke: steelblue;
+    stroke-width: 3px;
+  }
+  text {
+    font: 12px sans-serif;
+  }
+}
+.link {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 2px;
+}
+
+// Scrollbar for angucomplete-alt
+.angucomplete-dropdown {
+    overflow-y: auto;
+    max-height: 200px; // your preference
+}
+
+// Show More
+.show-more {
+  color: $divider-color;
+  vertical-align: middle;
+  cursor: pointer;
+  &:hover {
+    color: $secondary-text-color;
+  }
+}
