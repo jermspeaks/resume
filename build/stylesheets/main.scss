@@ -6,6 +6,7 @@
 @import "assets/neat/neat-helpers";
 @import "assets/base/base";
 @import "assets/refills/refills-custom";
+@import "assets/normalize";
 
 // Components
 @import "components";
@@ -21,32 +22,129 @@ body {
   font-size: 1em;
   font-weight: 400;
   line-height: 1;
-  max-width: 90vw;
   margin: auto;
-  background: $body-background-color;
-}
-.container {
-  background: $container-background-color;
-  overflow: hidden;
-  min-height: 100vh;
-  @include card(1);
 }
 a , a:hover, a:active, a:visited {
   color: inherit;
   text-decoration: none;
 }
-fieldset {
-  @include card(1);
+.outer-container {
+  @include outer-container();
 }
-.main-header-title:hover {
-  color: $light-primary-color;
+article {
+  @include pad();
 }
 
 .title {
-  &--name {
+  @include pad();
+
+  &--left {
+    @include span-columns(8);
+  }
+  &--right {
+    @include span-columns(4);
+    margin-right: 0;
+  }
+  &--desc__name {
     font-size: $large-font-size;
   }
-  &--subtitle {
+  &--desc__subtitle {
     font-size: $medium-font-size;
+  }
+  &--desc__address {
+    font-size: $small-font-size;
+  }
+  &--break {
+    margin-bottom: 1.5em;
+  }
+  &--attr {
+    border-bottom: 1px dotted black;
+    margin-bottom: 0.5em;
+  }
+  &--attr:last-child {
+    border-bottom: 0;
+  }
+}
+
+.profile,
+.education,
+.work,
+.volunteering {
+  @include span-columns(8);
+}
+
+.projects,
+.links {
+  @include span-columns(4);
+  margin-right: 0;
+}
+
+.profile {
+  &--title {
+    @include section-title($medium-font-size);
+  }
+}
+
+.education {
+  &--title {
+    @include section-title($medium-font-size);
+  }
+  &--school {
+    @include outer-container;
+    margin-bottom: 1.5em;    
+  }
+  &--school__left {
+    @include span-columns(3);
+  }
+  &--school__right {
+    @include span-columns(9);
+    margin-right: 0;
+  }
+  &--school__degree,
+  &--school__name {
+    display: block;
+  }
+  &--school__degree {
+    margin-bottom: 0.5em;
+  }
+}
+
+.work {
+  &--title {
+    @include section-title($medium-font-size);
+  }
+  &--company {
+    @include outer-container;
+    margin-bottom: 1.5em;
+  }
+  &--company__left {
+    @include span-columns(3);
+  }
+  &--company__right {
+    @include span-columns(9);
+    margin-right: 0;
+  }
+  &--company__name,
+  &--company__title {
+    display: block;
+    margin-bottom: 0.5em;
+  }
+}
+
+.volunteering {
+  &--title {
+    @include section-title($medium-font-size);
+  }
+}
+
+.projects {
+  &--title {
+    @include section-title($medium-font-size);
+  }
+}
+
+.links {
+  &--title {
+    @include section-title($medium-font-size);
   }
 }

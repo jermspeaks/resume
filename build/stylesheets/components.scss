@@ -23,14 +23,6 @@
 @import "var";
 
 /* ============================================
-  Form ng-messages Styles
-============================================ */
-.ng-messages {
-  @include font-medium-bold(12px);
-  color: red;
-  margin: 0 0 10px 0;
-}
-/* ============================================
   Floats
 ============================================ */
 .float-left {
@@ -42,43 +34,10 @@
 .clear-float {
   clear: both;
 }
-/* ============================================
-  Google Maps
-============================================ */
-.gmnoprint img {
-  max-width: none;
-}
-/* ============================================
-  d3 Concept Preview
-============================================ */
-.node {
-  circle {
-    fill: #fff;
-    stroke: steelblue;
-    stroke-width: 3px;
-  }
-  text {
-    font: 12px sans-serif;
-  }
-}
-.link {
-  fill: none;
-  stroke: #ccc;
-  stroke-width: 2px;
-}
 
-// Scrollbar for angucomplete-alt
-.angucomplete-dropdown {
-    overflow-y: auto;
-    max-height: 200px; // your preference
-}
 
-// Show More
-.show-more {
-  color: $divider-color;
-  vertical-align: middle;
-  cursor: pointer;
-  &:hover {
-    color: $secondary-text-color;
-  }
+@mixin section-title($font-size) {
+  font-size: $font-size;
+  border-bottom: 1px solid black;
+  margin-bottom: 0.8em;
 }
