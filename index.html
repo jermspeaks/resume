@@ -5,6 +5,7 @@
     <meta name="viewport" content="user-scalable = yes">
     <!-- Fonts -->
     <link href='//fonts.googleapis.com/css?family=Lato:100,200,300,400,500,600,700,800' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
     <!-- Stylesheets -->
     <!-- <link rel='stylesheet' href='/css/lib.css'/> -->
@@ -28,16 +29,40 @@
 
           <div class="title title--right">
             <div class="title--attr">
-              <label class="title--attr__title">Website</label>
-              <span class="title--attr__website">www.craftbyzen.com</span>
+              <div class="title--attr__left">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
+                </span>
+              </div>
+              <div class="title--attr__right">
+                <label class="title--attr__title">Website</label>
+                <span class="title--attr__website">www.craftbyzen.com</span>
+              </div>
             </div>
             <div class="title--attr">
-              <label class="title--attr__title">Mobile</label>
-              <span class="title--attr__mobile">510-717-3581</span>
+              <div class="title--attr__left">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-mobile fa-stack-1x fa-inverse"></i>
+                </span>
+              </div>
+              <div class="title--attr__right">
+                <label class="title--attr__title">Mobile</label>
+                <span class="title--attr__mobile">510-717-3581</span>
+              </div>
             </div>
             <div class="title--attr">
-              <label class="title--attr__title">Email</label>
-              <span class="title--attr__email">jermspeaks@gmail.com</span>
+              <div class="title--attr__left">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                </span>
+              </div>
+              <div class="title--attr__right">
+                <label class="title--attr__title">Email</label>
+                <span class="title--attr__email">jermspeaks@gmail.com</span>
+              </div>
             </div>
           </div>
         </div>
@@ -45,119 +70,192 @@
 
       <section>
         <div class="outer-container">
-          <article class="profile left-div">
-            <div class="profile--title">
-              <span class="profile--title__text">PROFILE</span>
-            </div>
-            <div class="profile--desc">
-              <p class="profile--desc__text">I’m a former medical device engineer turned software engineer, developing skills in front-end development. Acquired skills in build tools, quick prototyping, picking up new frameworks and cross-browser testing.</p>
-            </div>
-          </article>
+          <div class="outer-container main-left">
+            <article class="profile">
+              <div class="profile--title">
+                <span class="profile--title__text main--title">PROFILE</span>
+              </div>
+              <div class="profile--desc">
+                <p class="profile--desc__text">I’m a former medical device engineer turned software engineer, developing skills in front-end development. Acquired skills in build tools, quick prototyping, picking up new frameworks and cross-browser testing.</p>
+              </div>
+            </article>
 
-          <article class="projects right-div">
-            <div class="projects--title">
-              <span class="projects--title__text">FEATURED PROJECTS</span>
-            </div>            
-          </article>
-
-          <article class="education left-div">
-            <div class="education--title">
-              <span class="education--title__text">EDUCATION</span>
-            </div>
-            <div class="education--school">
-              <div class="education--school__left">
-                <span class="education--school__year"><strong>2014</strong></span>
+            <article class="education">
+              <div class="education--title">
+                <span class="education--title__text main--title">EDUCATION</span>
               </div>
-              <div class="education--school__right">
-                <span class="education--school__degree">Web Development</span>
-                <span class="education--school__name"><strong>Dev Bootcamp</strong></span>
-              </div>
-            </div>
-            <div class="education--school">
-              <div class="education--school__left">
-                <span class="education--school__year"><strong>2008-2012</strong></span>
-              </div>
-              <div class="education--school__right">
-                <span class="education--school__degree">Biomedical Engineering</span>
-                <span class="education--school__name"><strong>Cal Poly, San Luis Obispo</strong></span>
-              </div>
-            </div>
-          </article>
-
-          <article class="work left-div">
-            <div class="work--title">
-              <span class="work--title__text">EMPLOYMENT</span>
-            </div>
-            <div class="work--company">
-              <div class="work--company__left">
-                <span class="work--company__duration"><strong>2015-Current</strong></span>
-              </div>
-              <div class="work--company__right">
-                <span class="work--company__name">Inform (Formerly NDN)</span>
-                <span class="work--company__title"><strong>Front-end Engineer</strong></span>
-                <div class="work--desc">
-                  <span class="work--desc__summary">
-                    <p>After Inform acquired Reverb, worked on development of a Wordpress plugin in PHP. Then earned a lead UI role to develop an ongoing portal project for partners to view reports and metrics for their video content.</p>
-                  </span>
-                  <span class="work--desc__skills">
-                    <em>JS (Node, React, Flux, Redux, Webpack, Mocha), CSS (SASS), Codeship, AWS, Docker</em>
-                  </span>
+              <div class="education--school">
+                <div class="education--school__left">
+                  <span class="education--school__year"><strong>2014</strong></span>
+                </div>
+                <div class="education--school__right">
+                  <span class="education--school__degree">Web Development</span>
+                  <span class="education--school__name"><strong>Dev Bootcamp</strong></span>
                 </div>
               </div>
-            </div>
-            <div class="work--company">
-              <div class="work--company__left">
-                <span class="work--company__duration"><strong>2014-2015</strong></span>
-              </div>
-              <div class="work--company__right">
-                <span class="work--company__name">Reverb Technologies</span>
-                <span class="work--company__title"><strong>Junior UI Developer</strong></span>
-                <div class="work--desc">
-                  <span class="work--desc__summary">
-                    <p>Support developer on a UI team, later turned lead role, for a dashboard for publishers to gain insight into their audience and content performance.  Worked with Angular front-end following the product user stories and design wireframes. Also created internal tools for editing our topic graph model for curated topics used by the editorial team.</p>
-                  </span>
-                  <span class="work--desc__skills">
-                    <em>JS (Node, Angular, D3, Gulp, Jasmine, Cucumber), CSS (LESS), Jenkins, AWS</em>
-                  </span>
+              <div class="education--school">
+                <div class="education--school__left">
+                  <span class="education--school__year"><strong>2008-2012</strong></span>
+                </div>
+                <div class="education--school__right">
+                  <span class="education--school__degree">Biomedical Engineering</span>
+                  <span class="education--school__name"><strong>Cal Poly, San Luis Obispo</strong></span>
                 </div>
               </div>
-            </div>
-            <div class="work--company">
-              <div class="work--company__left">
-                <span class="work--company__duration"><strong>2012-2014</strong></span>
+            </article>
+
+            <article class="work">
+              <div class="work--title">
+                <span class="work--title__text main--title">EMPLOYMENT</span>
               </div>
-              <div class="work--company__right">
-                <span class="work--company__name">Lumenous Device Technologies</span>
-                <span class="work--company__title"><strong>Application Engineer</strong></span>
-                <div class="work--desc">
-                  <span class="work--desc__summary">
-                    <p>Facilitated job orders from raw material to end product with quality sign-offs, to the customer's specification. Built custom tooling and fixtures to solve customer-specific problems. Implemented a lean manufacturing tool, 5S, for the work facility with facility-wide rollout. Trained new hires the company’s processes in manufacturing, best practices, and quality assurances</p>
-                  </span>
+              <div class="work--company">
+                <div class="work--company__left">
+                  <span class="work--company__duration"><strong>2015-Current</strong></span>
+                </div>
+                <div class="work--company__right">
+                  <span class="work--company__name">Inform (Formerly NDN)</span>
+                  <span class="work--company__title"><strong>Front-end Engineer</strong></span>
+                  <div class="work--desc">
+                    <span class="work--desc__summary">
+                      <p>After Inform acquired Reverb, worked on development of a Wordpress plugin in PHP. Then earned a lead UI role to develop an ongoing portal project for partners to view reports and metrics for their video content.</p>
+                    </span>
+                    <span class="work--desc__skills">
+                      <em>PHP (Wordpress), JS (Node, React, Flux, Redux, Webpack, Mocha), CSS (SASS), Codeship, AWS, Docker</em>
+                    </span>
+                  </div>
                 </div>
               </div>
-            </div>          
-          </article>
+              <div class="work--company">
+                <div class="work--company__left">
+                  <span class="work--company__duration"><strong>2014-2015</strong></span>
+                </div>
+                <div class="work--company__right">
+                  <span class="work--company__name">Reverb Technologies</span>
+                  <span class="work--company__title"><strong>Junior UI Developer</strong></span>
+                  <div class="work--desc">
+                    <span class="work--desc__summary">
+                      <p>Support developer on a UI team, later turned lead role, for a dashboard for publishers to gain insight into their audience and content performance.  Worked with Angular front-end following the product user stories and design wireframes. Also created internal tools for editing our topic graph model for curated topics used by the editorial team.</p>
+                    </span>
+                    <span class="work--desc__skills">
+                      <em>JS (Node, Angular, D3, Gulp, Jasmine, Cucumber), CSS (LESS), Jenkins, AWS</em>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="work--company">
+                <div class="work--company__left">
+                  <span class="work--company__duration"><strong>2012-2014</strong></span>
+                </div>
+                <div class="work--company__right">
+                  <span class="work--company__name">Lumenous Device Technologies</span>
+                  <span class="work--company__title"><strong>Application Engineer</strong></span>
+                  <div class="work--desc">
+                    <span class="work--desc__summary">
+                      <p>Facilitated job orders from raw material to end product with quality sign-offs, to the customer's specification. Built custom tooling and fixtures to solve customer-specific problems. Implemented a lean manufacturing tool, 5S, for the work facility with facility-wide rollout. Trained new hires the company’s processes in manufacturing, best practices, and quality assurances</p>
+                    </span>
+                  </div>
+                </div>
+              </div>          
+            </article>
+          </div>
 
-          <article class="volunteering left-div">
-            <div class="volunteering--title">
-              <span class="volunteering--title__text">VOLUNTEERING</span>
-            </div>           
-          </article>
+          <div class="outer-container main-right">
+            <article class="projects">
+              <div class="projects--title">
+                <span class="projects--title__text main--title">FEATURED PROJECTS</span>
+              </div>
+              <div class="projects--build">
+                <span class="projects--build__name"><strong>Coral Reef Game</strong></span>
+                <ul class="projects--build__skills">
+                  <li class="projects--build__skill"><span class="projects--build__skill-name">Game Development</span></li>
+                  <li class="projects--build__skill"><span class="projects--build__skill-name">Environmentalism</span></li>
+                </ul>
+                <span class="projects--build__website"><a href="http://goo.gl/k3N98x" target="blank">goo.gl/k3N98x</a></span>
+              </div>
+              <div class="projects--build">
+                <span class="projects--build__name"><strong>React Yeoman Generator</strong></span>
+                <ul class="projects--build__skills">
+                  <li class="projects--build__skill"><span class="projects--build__skill-name">Datamaps</span></li>
+                  <li class="projects--build__skill"><span class="projects--build__skill-name">Angular</span></li>
+                  <li class="projects--build__skill"><span class="projects--build__skill-name">D3</span></li>
+                </ul>
+                <span class="projects--build__website"><a href="http://goo.gl/zxRb5T" target="blank">goo.gl/zxRb5T</a></span>
+              </div>
+              <div class="projects--build">
+                <span class="projects--build__name"><strong>Families USA Map</strong></span>
+                <ul class="projects--build__skills">
+                  <li class="projects--build__skill"><span class="projects--build__skill-name">Datamaps</span></li>
+                  <li class="projects--build__skill"><span class="projects--build__skill-name">Angular</span></li>
+                  <li class="projects--build__skill"><span class="projects--build__skill-name">D3</span></li>
+                </ul>
+                <span class="projects--build__website"><a href="http://goo.gl/qRJ8ZE" target="blank">goo.gl/qRJ8ZE</a></span>
+              </div>
+              <div class="projects--build">
+                <span class="projects--build__name"><strong>Remembrance</strong></span>
+                <ul class="projects--build__skills">
+                  <li class="projects--build__skill"><span class="projects--build__skill-name">Social Spaces</span></li>
+                  <li class="projects--build__skill"><span class="projects--build__skill-name">Rails</span></li>
+                  <li class="projects--build__skill"><span class="projects--build__skill-name">Team Work</span></li>
+                </ul>
+                <span class="projects--build__website"><a href="http://goo.gl/TMWJyV" target="blank">goo.gl/TMWJyV</a></span>
+              </div>
+            </article>
 
-          <article class="links right-div">
-            <div class="links--title">
-              <span class="links--title__text">CODE / LINKS</span>
-            </div>  
-            <div class="links--website">
-              <span class="links--website__name">Github</span>
-            </div>
-            <div class="links--website">
-              <span class="links--website__name">Codepen</span>
-            </div>
-            <div class="links--website">
-              <span class="links--website__name">LinkedIn</span>
-            </div>
-          </article>
+            <article class="volunteering">
+              <div class="volunteering--title">
+                <span class="volunteering--title__text main--title">VOLUNTEERING</span>
+              </div>
+              <div class="volunteering--event outer-container">
+                <div class="volunteering--event__left">
+                  <span class="volunteering--event__year">2014</span>
+                </div>
+                <div class="volunteering--event__right">
+                  <span class="volunteering--event__name"><strong>Coding Club</strong></span>
+                  <span class="volunteering--event__role">Facilitator</span>
+                </div>
+              </div>
+              <div class="volunteering--event outer-container">
+                <div class="volunteering--event__left">
+                  <span class="volunteering--event__year">2014</span>
+                </div>
+                <div class="volunteering--event__right">
+                  <span class="volunteering--event__name"><strong>HTML5 Developer Conference</strong></span>
+                  <span class="volunteering--event__role">Volunteer</span>
+                </div>
+              </div>       
+              <div class="volunteering--event outer-container no-print">
+                <div class="volunteering--event__left">
+                  <span class="volunteering--event__year">2010-2012</span>
+                </div>
+                <div class="volunteering--event__right">
+                  <span class="volunteering--event__name"><strong>QL+ (Quality of Life +)</strong></span>
+                  <span class="volunteering--event__role">Treasurer</span>
+                </div>
+              </div>   
+            </article>
+
+            <article class="links">
+              <div class="links--title">
+                <span class="links--title__text main--title">CODE / LINKS</span>
+              </div>  
+              <div class="links--website">
+                <span class="links--website__name"><strong>Github</strong></span>
+                <span class="links--website__site"><a href="http://github.com/jermspeaks" target="_blank">github.com/jermspeaks</a></span>
+              </div>
+              <div class="links--website">
+                <span class="links--website__name"><strong>Codepen</strong></span>
+                <span class="links--website__site">
+                  <a href="http://codepen.io/jermspeaks/" target="_blank">codepen.io/jermspeaks/</a>
+                </span>
+
+              </div>
+              <div class="links--website">
+                <span class="links--website__name"><strong>LinkedIn</strong></span>
+                <span><a href="https://www.linkedin.com/in/jeremynwong" target="_blank">linkedin.com/in/jeremynwong</a></span>
+              </div>
+            </article>
+          </div>
+
         </div>
       </section>
       <footer></footer>
