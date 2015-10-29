@@ -10,14 +10,6 @@
 // Components
 @import "components";
 
-// Pages
-@import "pages/landing";
-@import "pages/topic-new";
-@import "pages/topic-edit";
-@import "pages/topic-search";
-@import "pages/form-view";
-@import "pages/form-edit";
-
 // Variables
 @import "var";
 
@@ -29,7 +21,7 @@ body {
   font-size: 1em;
   font-weight: 400;
   line-height: 1;
-  max-width: 1024px;
+  max-width: 90vw;
   margin: auto;
   background: $body-background-color;
 }
@@ -48,4 +40,13 @@ fieldset {
 }
 .main-header-title:hover {
   color: $light-primary-color;
+}
+
+.title {
+  &--name {
+    font-size: $large-font-size;
+  }
+  &--subtitle {
+    font-size: $medium-font-size;
+  }
 }

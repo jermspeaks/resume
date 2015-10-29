@@ -15,15 +15,6 @@ var livereloadport = 35729;
 var serverport = 5000;
 var EXPRESS_ROOT = __dirname;
 
-gulp.paths = {
-  build: 'build',
-  dist: 'dist'
-};
-
-gulp.task('default', function () {
-    gulp.start('dist');
-});
-
 function processStyleSheets() {
   return gulp.src('./build/stylesheets/main.scss')
     .pipe(buffer())
@@ -33,13 +24,13 @@ function processStyleSheets() {
     }).on('error', sass.logError))
     .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'))
     .on('error', gutil.log)
-    .pipe(gulp.dest('./dist/css'))
+    .pipe(gulp.dest('./public/css'))
     .pipe(rename({
       suffix: '.min'
     }))
     .pipe(minifycss())
     /* jshint camelcase: false */
-    .pipe(gulp.dest('./dist/css'));
+    .pipe(gulp.dest('./public/css'));
 }
 
 // Build styles
@@ -60,12 +51,12 @@ var server = express();
 server.use(livereload({
   port: livereloadport
 }));
-// Use our 'dist' folder as rootfolder
-server.use(express.static('./dist'));
+// Use our 'public' folder as rootfolder
+server.use(express.static('./public'));
 // Because I like HTML5 pushstate .. this redirects everything back to our index.html
 server.all('/*', function(req, res) {
   res.sendFile('index.html', {
-    root: 'dist'
+    root: 'public'
   });
 });
 
@@ -88,5 +79,5 @@ gulp.task('serve', function() {
 
   console.log('Serving on port 5000');
   // Run the watch task, to keep taps on changes
-  gulp.watch(['./dist/index.html', './dist/css/*.css', './dist/js/*.js'], notifyLivereload);
+  gulp.watch(['./index.html', './public/css/*.css', './public/js/*.js'], notifyLivereload);
 });
