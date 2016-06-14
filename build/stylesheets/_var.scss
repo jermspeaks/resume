@@ -10,6 +10,15 @@ $light-gray: #B6B6B6;
 $green: #4CAF50;
 $yellow: #FFA000;
 
+// Grays
+$gray-dark-3: lighten($black, 12.5%);
+$gray-dark-2: lighten($black, 25%);
+$gray-dark-1: lighten($black, 37.5%);
+$gray-med: lighten($black, 50%);
+$gray-light-3: lighten($black, 67.5%);
+$gray-light-2: lighten($black, 75%);
+$gray-light-1: lighten($black, 87.5%);
+
 // Color Descriptions
 $body-background-color: #e7e5e0;
 $container-background-color: #f9f9f9;

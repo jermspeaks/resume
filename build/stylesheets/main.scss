@@ -54,9 +54,11 @@ article,
   }
   &--desc__subtitle {
     font-size: $medium-font-size;
+    color: $gray-dark-2;
   }
   &--desc__address {
     font-size: $small-font-size;
+    color: $gray-dark-2;
   }
   &--break {
     margin-bottom: $margin-bottom-large;
@@ -75,7 +77,7 @@ article,
   &--attr__right {
     @include span-columns(10);
     margin-right: 0;
-    border-bottom: 1px dotted black;
+    border-bottom: 1px dotted $gray-light-3;
   }
   &--attr__title {
     padding-top: 0.5em;
@@ -106,7 +108,7 @@ article,
   }
   &--school {
     @include outer-container;
-    margin-bottom: $margin-bottom-large;    
+    margin-bottom: $margin-bottom-large;
   }
   &--school__left {
     @include span-columns(3);
@@ -148,7 +150,8 @@ article,
     margin-bottom: 0.5em;
   }
   &--desc__skills {
-    font-size: $small-font-size
+    font-size: $small-font-size;
+    color: $gray-dark-1;
   }
 }
 
@@ -192,6 +195,13 @@ article,
   &--build__name,
   &--build__skills {
     margin-bottom: $margin-bottom-small;
+  }
+  &--build__website {
+    color: $gray-med;
+
+    &:hover {
+      color: $gray-dark-3;
+    }
   }
 }
 
@@ -258,7 +268,7 @@ article,
   }
   .education {
     &--school {
-      margin-bottom: 0.5em;    
+      margin-bottom: 0.5em;
     }
   }
   .work {
@@ -275,6 +285,6 @@ article,
     }
   }
   .no-print {
-    display: none;  
+    display: none;
   }
 }

@@ -64,7 +64,7 @@ label {
   label abbr {
     display: none; }
 
-input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"], textarea,
+input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"], input:not([type]), textarea,
 select[multiple=multiple],
 textarea {
   background-color: #fff;
@@ -76,14 +76,13 @@ textarea {
   font-size: 1em;
   margin-bottom: 0.75em;
   padding: 0.5em;
-  -webkit-transition: border-color;
-          transition: border-color;
+  transition: border-color;
   width: 100%; }
-  input[type="color"]:hover, input[type="date"]:hover, input[type="datetime"]:hover, input[type="datetime-local"]:hover, input[type="email"]:hover, input[type="month"]:hover, input[type="number"]:hover, input[type="password"]:hover, input[type="search"]:hover, input[type="tel"]:hover, input[type="text"]:hover, input[type="time"]:hover, input[type="url"]:hover, input[type="week"]:hover, textarea:hover,
+  input[type="color"]:hover, input[type="date"]:hover, input[type="datetime"]:hover, input[type="datetime-local"]:hover, input[type="email"]:hover, input[type="month"]:hover, input[type="number"]:hover, input[type="password"]:hover, input[type="search"]:hover, input[type="tel"]:hover, input[type="text"]:hover, input[type="time"]:hover, input[type="url"]:hover, input[type="week"]:hover, input:not([type]):hover, textarea:hover,
   select[multiple=multiple]:hover,
   textarea:hover {
     border-color: #c4c4c4; }
-  input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="email"]:focus, input[type="month"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="time"]:focus, input[type="url"]:focus, input[type="week"]:focus, textarea:focus,
+  input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="email"]:focus, input[type="month"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="time"]:focus, input[type="url"]:focus, input[type="week"]:focus, input:not([type]):focus, textarea:focus,
   select[multiple=multiple]:focus,
   textarea:focus {
     border-color: #477dca;
@@ -130,7 +129,6 @@ dl {
 
 table {
   -webkit-font-feature-settings: "kern", "liga", "tnum";
-  -moz-font-feature-settings: "kern", "liga", "tnum";
   -ms-font-feature-settings: "kern", "liga", "tnum";
   font-feature-settings: "kern", "liga", "tnum";
   border-collapse: collapse;
@@ -155,7 +153,6 @@ th {
 
 body {
   -webkit-font-feature-settings: "kern", "liga", "pnum";
-  -moz-font-feature-settings: "kern", "liga", "pnum";
   -ms-font-feature-settings: "kern", "liga", "pnum";
   font-feature-settings: "kern", "liga", "pnum";
   -webkit-font-smoothing: antialiased;
@@ -181,8 +178,7 @@ p {
 a {
   color: #477dca;
   text-decoration: none;
-  -webkit-transition: color 0.1s linear;
-          transition: color 0.1s linear; }
+  transition: color 0.1s linear; }
   a:active, a:focus, a:hover {
     color: #2c5999; }
   a:active, a:focus {
@@ -209,7 +205,6 @@ picture {
     -ms-appearance: none;
     -o-appearance: none;
     appearance: none;
-    -webkit-transition: border-color;
     transition: border-color;
     background-color: white;
     border-radius: 3px;
@@ -709,7 +704,7 @@ label {
   label abbr {
     display: none; }
 
-input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"], textarea,
+input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"], input:not([type]), textarea,
 select[multiple=multiple],
 textarea {
   background-color: #fff;
@@ -721,14 +716,13 @@ textarea {
   font-size: 1em;
   margin-bottom: 0.75em;
   padding: 0.5em;
-  -webkit-transition: border-color;
-          transition: border-color;
+  transition: border-color;
   width: 100%; }
-  input[type="color"]:hover, input[type="date"]:hover, input[type="datetime"]:hover, input[type="datetime-local"]:hover, input[type="email"]:hover, input[type="month"]:hover, input[type="number"]:hover, input[type="password"]:hover, input[type="search"]:hover, input[type="tel"]:hover, input[type="text"]:hover, input[type="time"]:hover, input[type="url"]:hover, input[type="week"]:hover, textarea:hover,
+  input[type="color"]:hover, input[type="date"]:hover, input[type="datetime"]:hover, input[type="datetime-local"]:hover, input[type="email"]:hover, input[type="month"]:hover, input[type="number"]:hover, input[type="password"]:hover, input[type="search"]:hover, input[type="tel"]:hover, input[type="text"]:hover, input[type="time"]:hover, input[type="url"]:hover, input[type="week"]:hover, input:not([type]):hover, textarea:hover,
   select[multiple=multiple]:hover,
   textarea:hover {
     border-color: #c4c4c4; }
-  input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="email"]:focus, input[type="month"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="time"]:focus, input[type="url"]:focus, input[type="week"]:focus, textarea:focus,
+  input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="email"]:focus, input[type="month"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="time"]:focus, input[type="url"]:focus, input[type="week"]:focus, input:not([type]):focus, textarea:focus,
   select[multiple=multiple]:focus,
   textarea:focus {
     border-color: #477dca;
@@ -775,7 +769,6 @@ dl {
 
 table {
   -webkit-font-feature-settings: "kern", "liga", "tnum";
-  -moz-font-feature-settings: "kern", "liga", "tnum";
   -ms-font-feature-settings: "kern", "liga", "tnum";
   font-feature-settings: "kern", "liga", "tnum";
   border-collapse: collapse;
@@ -800,7 +793,6 @@ th {
 
 body {
   -webkit-font-feature-settings: "kern", "liga", "pnum";
-  -moz-font-feature-settings: "kern", "liga", "pnum";
   -ms-font-feature-settings: "kern", "liga", "pnum";
   font-feature-settings: "kern", "liga", "pnum";
   -webkit-font-smoothing: antialiased;
@@ -826,8 +818,7 @@ p {
 a {
   color: #477dca;
   text-decoration: none;
-  -webkit-transition: color 0.1s linear;
-          transition: color 0.1s linear; }
+  transition: color 0.1s linear; }
   a:active, a:focus, a:hover {
     color: #2c5999; }
   a:active, a:focus {
@@ -855,12 +846,15 @@ picture {
   font-size: 56px;
   font-weight: 500;
   text-align: center;
+  color: #000;
   padding: 20px 0; }
 
 .secondary-header {
   font-size: 24px;
   font-weight: 500;
+  color: #c0c0c0;
   margin: 30px 0;
+  color: #c0c0c0;
   text-align: center; }
 
 /* ============================================
@@ -1024,7 +1018,6 @@ picture {
   margin: 0 1rem 0 0;
   cursor: pointer; }
   .checkbox:before {
-    -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     content: "";
     position: absolute;
@@ -1035,7 +1028,6 @@ picture {
     border: 2px solid #212121; }
   .checkbox:checked:before {
     -webkit-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
     transform: rotate(-45deg);
     height: .5rem;
     border-color: #009688;
@@ -1065,8 +1057,7 @@ div.tagsinput {
   font-size: 1em;
   margin-bottom: 0.75em;
   padding: 0.5em;
-  -webkit-transition: border-color;
-          transition: border-color;
+  transition: border-color;
   width: 100%;
   overflow-y: auto;
   margin: 15px 0; }
@@ -1127,8 +1118,7 @@ div.input-focused {
   height: 16px;
   border-radius: 8px;
   background: rgba(0, 0, 0, 0.26);
-  -webkit-transition: background 0.28s cubic-bezier(0.4, 0, 0.2, 1);
-          transition: background 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background 0.28s cubic-bezier(0.4, 0, 0.2, 1);
   vertical-align: middle;
   cursor: pointer; }
   .toggle-switch::before {
@@ -1141,8 +1131,7 @@ div.input-focused {
     background: #fafafa;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.28);
     border-radius: 50%;
-    -webkit-transition: left 0.28s cubic-bezier(0.4, 0, 0.2, 1), background 0.28s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
-            transition: left 0.28s cubic-bezier(0.4, 0, 0.2, 1), background 0.28s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1); }
+    transition: left 0.28s cubic-bezier(0.4, 0, 0.2, 1), background 0.28s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1); }
   .toggle-switch:active::before {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.28), 0 0 0 20px rgba(128, 128, 128, 0.1); }
 
@@ -1202,7 +1191,6 @@ input:checked + .toggle-switch {
   top: 0; }
 
 .dropdown-animate {
-  -webkit-transition: all .3s;
   transition: all .3s;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
@@ -1278,11 +1266,9 @@ input:checked + .toggle-switch {
     min-width: 150px;
     font-size: 0.5em;
     -webkit-transform: translateY(10px);
-        -ms-transform: translateY(10px);
             transform: translateY(10px);
     border-radius: 2px;
-    -webkit-transition: all .25s ease-out;
-            transition: all .25s ease-out;
+    transition: all .25s ease-out;
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28); }
     .info-icon i .tooltip:before {
       bottom: -20px;
@@ -1304,7 +1290,6 @@ input:checked + .toggle-switch {
     opacity: 1;
     pointer-events: auto;
     -webkit-transform: translateY(0px);
-    -ms-transform: translateY(0px);
     transform: translateY(0px); }
 
 /* ============================================
@@ -1318,13 +1303,11 @@ input:checked + .toggle-switch {
   height: 11em;
   border-radius: 50%;
   background: #F57C00;
-  background: -webkit-linear-gradient(left, #F57C00 10%, rgba(255, 255, 255, 0) 42%);
   background: linear-gradient(to right, #F57C00 10%, rgba(255, 255, 255, 0) 42%);
   position: relative;
   -webkit-animation: load-spinner 1.4s infinite linear;
   animation: load-spinner 1.4s infinite linear;
   -webkit-transform: translateZ(0);
-  -ms-transform: translateZ(0);
   transform: translateZ(0); }
 
 .loader:before {
@@ -1429,10 +1412,12 @@ article,
   font-size: 4em; }
 
 .title--desc__subtitle {
-  font-size: 1.75em; }
+  font-size: 1.75em;
+  color: #616161; }
 
 .title--desc__address {
-  font-size: 0.8em; }
+  font-size: 0.8em;
+  color: #616161; }
 
 .title--break {
   margin-bottom: 1.5em; }
@@ -1465,7 +1450,7 @@ article,
   margin-right: 2.35765%;
   width: 82.94039%;
   margin-right: 0;
-  border-bottom: 1px dotted black; }
+  border-bottom: 1px dotted #cdcdcd; }
   .title--attr__right:last-child {
     margin-right: 0; }
 
@@ -1493,11 +1478,11 @@ article,
   font-size: 1.75em; }
 
 .profile--title {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #cdcdcd;
   margin-bottom: 0.8em; }
 
 .education--title {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #cdcdcd;
   margin-bottom: 0.8em; }
 
 .education--school {
@@ -1534,7 +1519,7 @@ article,
   margin-bottom: 0.25em; }
 
 .work--title {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #cdcdcd;
   margin-bottom: 0.8em; }
 
 .work--company {
@@ -1572,10 +1557,11 @@ article,
   margin-bottom: 0.5em; }
 
 .work--desc__skills {
-  font-size: 0.8em; }
+  font-size: 0.8em;
+  color: #818181; }
 
 .volunteering--title {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #cdcdcd;
   margin-bottom: 0.8em; }
 
 .volunteering--event {
@@ -1603,7 +1589,7 @@ article,
   margin-bottom: 0.25em; }
 
 .projects--title {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #cdcdcd;
   margin-bottom: 0.8em; }
 
 .projects--build {
@@ -1621,8 +1607,13 @@ article,
 .projects--build__name, .projects--build__skills {
   margin-bottom: 0.25em; }
 
+.projects--build__website {
+  color: #a1a1a1; }
+  .projects--build__website:hover {
+    color: #414141; }
+
 .links--title {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #cdcdcd;
   margin-bottom: 0.8em; }
 
 .links--website {
