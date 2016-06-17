@@ -8,11 +8,18 @@
 @import "assets/refills/refills-custom";
 @import "assets/normalize";
 
+// Variables
+@import "var";
+
 // Components
 @import "components";
 
-// Variables
-@import "var";
+// Modules
+@import "modules/work";
+@import "modules/education";
+@import "modules/stack";
+@import "modules/projects";
+@import "modules/volunteering";
 
 /* ============================================
   Globals
@@ -77,10 +84,14 @@ article,
   &--attr__right {
     @include span-columns(10);
     margin-right: 0;
-    border-bottom: 1px dotted $gray-light-3;
   }
   &--attr__title {
     padding-top: 0.5em;
+  }
+  &--attr__website,
+  &--attr__mobile,
+  &--attr__email {
+    font-size: 12px;
   }
 }
 
@@ -94,114 +105,27 @@ article,
 
 .main--title {
   font-size: $medium-font-size;
+  text-transform: uppercase;
+}
+
+.profile,
+.work {
+  margin-bottom: 24px;
+}
+
+.stack,
+.projects,
+.volunteering {
+  margin-bottom: 18px;
 }
 
 .profile {
   &--title {
     @include section-title();
   }
-}
-
-.education {
-  &--title {
-    @include section-title();
-  }
-  &--school {
-    @include outer-container;
-    margin-bottom: $margin-bottom-large;
-  }
-  &--school__left {
-    @include span-columns(3);
-  }
-  &--school__right {
-    @include span-columns(9);
-    margin-right: 0;
-  }
-  &--school__degree,
-  &--school__name {
-    display: block;
-  }
-  &--school__degree {
-    margin-bottom: $margin-bottom-small;
-  }
-}
-
-.work {
-  &--title {
-    @include section-title();
-  }
-  &--company {
-    @include outer-container;
-    margin-bottom: $margin-bottom-large;
-  }
-  &--company:last-child {
-    margin-bottom: 0;
-  }
-  &--company__left {
-    @include span-columns(3);
-  }
-  &--company__right {
-    @include span-columns(9);
-    margin-right: 0;
-  }
-  &--company__name,
-  &--company__title {
-    display: block;
-    margin-bottom: 0.5em;
-  }
-  &--desc__skills {
-    font-size: $small-font-size;
-    color: $gray-dark-1;
-  }
-}
-
-.volunteering {
-  &--title {
-    @include section-title();
-  }
-  &--event {
-    margin-bottom: $margin-bottom-large;
-  }
-  &--event__left {
-    @include span-columns(4);
-  }
-  &--event__right {
-    @include span-columns(8);
-    margin-right: 0;
-  }
-  &--event__name,
-  &--event__role {
-    display: block;
-    margin-bottom: $margin-bottom-small;
-  }
-}
-
-.projects {
-  &--title {
-    @include section-title();
-  }
-  &--build {
-    margin-bottom: $margin-bottom-large;
-  }
-  &--build__name {
-    display: block;
-  }
-  &--build__skill {
-    display: inline;
-  }
-  &--build__skill + &--build__skill:before {
-    content: "/ ";
-  }
-  &--build__name,
-  &--build__skills {
-    margin-bottom: $margin-bottom-small;
-  }
-  &--build__website {
-    color: $gray-med;
-
-    &:hover {
-      color: $gray-dark-3;
-    }
+  &--desc__text {
+    font-size: 14px;
+    line-height: 16px;
   }
 }
 
@@ -210,12 +134,13 @@ article,
     @include section-title();
   }
   &--website {
-    margin-bottom: $margin-bottom-large;
+    margin-bottom: $margin-bottom-small-50;
   }
   &--website__name,
   &--website__site {
     display: block;
     margin-bottom: $margin-bottom-small;
+    font-size: 12px;
   }
 }
 

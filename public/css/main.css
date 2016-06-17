@@ -1361,6 +1361,181 @@ input:checked + .toggle-switch {
 .clear-float {
   clear: both; }
 
+.work--title {
+  border-bottom: 1px solid #cdcdcd;
+  margin-bottom: 0.8em; }
+
+.work--company {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.5em; }
+  .work--company::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+.work--company:last-child {
+  margin-bottom: 0; }
+
+.work--company__left {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 14.70196%; }
+  .work--company__left:last-child {
+    margin-right: 0; }
+
+.work--company__right {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 82.94039%;
+  margin-right: 0; }
+  .work--company__right:last-child {
+    margin-right: 0; }
+
+.work--company__duration {
+  font-size: 12px; }
+
+.work--company__name, .work--company__title {
+  display: inline-block;
+  margin-bottom: 0.5em; }
+
+.work--projects, .work--responsibilities, .work--responsibility {
+  margin-left: 20px; }
+
+.work--responsibilities {
+  list-style-type: disc; }
+
+.work--responsibility {
+  font-size: 11px;
+  font-weight: 300; }
+
+.work--desc__skills {
+  font-size: 0.8em;
+  color: #818181; }
+
+.work--project {
+  margin-bottom: 5px; }
+  .work--project:last-child {
+    margin-bottom: 0; }
+  .work--project__title, .work--project__subtitle {
+    font-size: 14px; }
+  .work--project-responsibilities {
+    list-style-type: disc; }
+  .work--project-responsibility {
+    margin-left: 20px;
+    font-size: 11px;
+    font-weight: 300; }
+
+.education--title {
+  border-bottom: 1px solid #cdcdcd;
+  margin-bottom: 0.8em; }
+
+.education--school {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.5em; }
+  .education--school::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+.education--school__left {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%; }
+  .education--school__left:last-child {
+    margin-right: 0; }
+
+.education--school__right {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 74.41059%;
+  margin-right: 0; }
+  .education--school__right:last-child {
+    margin-right: 0; }
+
+.education--school__degree, .education--school__name {
+  display: block; }
+
+.education--school__degree {
+  margin-bottom: 0.25em;
+  font-size: 14px; }
+
+.stack--title {
+  border-bottom: 1px solid #cdcdcd;
+  margin-bottom: 0.8em; }
+
+.stack--list__item {
+  margin-bottom: 5px;
+  font-size: 14px; }
+  .stack--list__item:last-child {
+    margin-bottom: 0; }
+
+.projects--title {
+  border-bottom: 1px solid #cdcdcd;
+  margin-bottom: 0.8em; }
+
+.projects--build {
+  margin-bottom: 0.5em; }
+
+.projects--build__name {
+  display: block; }
+
+.projects--build__skill {
+  display: inline; }
+
+.projects--build__skill + .projects--build__skill:before {
+  content: "/ "; }
+
+.projects--build__name, .projects--build__skills {
+  margin-bottom: 0.25em; }
+
+.projects--build__skills, .projects--build__website {
+  font-size: 12px; }
+
+.projects--build__website {
+  color: #a1a1a1; }
+  .projects--build__website:hover {
+    color: #414141; }
+
+.volunteering--title {
+  border-bottom: 1px solid #cdcdcd;
+  margin-bottom: 0.8em; }
+
+.volunteering--event {
+  margin-bottom: 0.5em; }
+
+.volunteering--event__left {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 14.70196%; }
+  .volunteering--event__left:last-child {
+    margin-right: 0; }
+
+.volunteering--event__right {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 82.94039%;
+  margin-right: 0; }
+  .volunteering--event__right:last-child {
+    margin-right: 0; }
+
+.volunteering--event__year {
+  font-size: 12px; }
+
+.volunteering--event__name, .volunteering--event__role {
+  display: block;
+  margin-bottom: 0.25em;
+  font-size: 12px; }
+
 /* ============================================
   Globals
 ============================================ */
@@ -1449,13 +1624,15 @@ article,
   display: block;
   margin-right: 2.35765%;
   width: 82.94039%;
-  margin-right: 0;
-  border-bottom: 1px dotted #cdcdcd; }
+  margin-right: 0; }
   .title--attr__right:last-child {
     margin-right: 0; }
 
 .title--attr__title {
   padding-top: 0.5em; }
+
+.title--attr__website, .title--attr__mobile, .title--attr__email {
+  font-size: 12px; }
 
 .main-left {
   float: left;
@@ -1475,153 +1652,37 @@ article,
     margin-right: 0; }
 
 .main--title {
-  font-size: 1.75em; }
+  font-size: 1.75em;
+  text-transform: uppercase; }
+
+.profile,
+.work {
+  margin-bottom: 24px; }
+
+.stack,
+.projects,
+.volunteering {
+  margin-bottom: 18px; }
 
 .profile--title {
   border-bottom: 1px solid #cdcdcd;
   margin-bottom: 0.8em; }
 
-.education--title {
-  border-bottom: 1px solid #cdcdcd;
-  margin-bottom: 0.8em; }
-
-.education--school {
-  max-width: 68em;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1.5em; }
-  .education--school::after {
-    clear: both;
-    content: "";
-    display: table; }
-
-.education--school__left {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 23.23176%; }
-  .education--school__left:last-child {
-    margin-right: 0; }
-
-.education--school__right {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 74.41059%;
-  margin-right: 0; }
-  .education--school__right:last-child {
-    margin-right: 0; }
-
-.education--school__degree, .education--school__name {
-  display: block; }
-
-.education--school__degree {
-  margin-bottom: 0.25em; }
-
-.work--title {
-  border-bottom: 1px solid #cdcdcd;
-  margin-bottom: 0.8em; }
-
-.work--company {
-  max-width: 68em;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1.5em; }
-  .work--company::after {
-    clear: both;
-    content: "";
-    display: table; }
-
-.work--company:last-child {
-  margin-bottom: 0; }
-
-.work--company__left {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 23.23176%; }
-  .work--company__left:last-child {
-    margin-right: 0; }
-
-.work--company__right {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 74.41059%;
-  margin-right: 0; }
-  .work--company__right:last-child {
-    margin-right: 0; }
-
-.work--company__name, .work--company__title {
-  display: block;
-  margin-bottom: 0.5em; }
-
-.work--desc__skills {
-  font-size: 0.8em;
-  color: #818181; }
-
-.volunteering--title {
-  border-bottom: 1px solid #cdcdcd;
-  margin-bottom: 0.8em; }
-
-.volunteering--event {
-  margin-bottom: 1.5em; }
-
-.volunteering--event__left {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 31.76157%; }
-  .volunteering--event__left:last-child {
-    margin-right: 0; }
-
-.volunteering--event__right {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 65.88078%;
-  margin-right: 0; }
-  .volunteering--event__right:last-child {
-    margin-right: 0; }
-
-.volunteering--event__name, .volunteering--event__role {
-  display: block;
-  margin-bottom: 0.25em; }
-
-.projects--title {
-  border-bottom: 1px solid #cdcdcd;
-  margin-bottom: 0.8em; }
-
-.projects--build {
-  margin-bottom: 1.5em; }
-
-.projects--build__name {
-  display: block; }
-
-.projects--build__skill {
-  display: inline; }
-
-.projects--build__skill + .projects--build__skill:before {
-  content: "/ "; }
-
-.projects--build__name, .projects--build__skills {
-  margin-bottom: 0.25em; }
-
-.projects--build__website {
-  color: #a1a1a1; }
-  .projects--build__website:hover {
-    color: #414141; }
+.profile--desc__text {
+  font-size: 14px;
+  line-height: 16px; }
 
 .links--title {
   border-bottom: 1px solid #cdcdcd;
   margin-bottom: 0.8em; }
 
 .links--website {
-  margin-bottom: 1.5em; }
+  margin-bottom: 0.5em; }
 
 .links--website__name, .links--website__site {
   display: block;
-  margin-bottom: 0.25em; }
+  margin-bottom: 0.25em;
+  font-size: 12px; }
 
 @media print {
   .title--left {
