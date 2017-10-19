@@ -128,7 +128,6 @@ dl {
     margin: 0; }
 
 table {
-  -webkit-font-feature-settings: "kern", "liga", "tnum";
   -ms-font-feature-settings: "kern", "liga", "tnum";
   font-feature-settings: "kern", "liga", "tnum";
   border-collapse: collapse;
@@ -152,7 +151,6 @@ th {
   vertical-align: middle; }
 
 body {
-  -webkit-font-feature-settings: "kern", "liga", "pnum";
   -ms-font-feature-settings: "kern", "liga", "pnum";
   font-feature-settings: "kern", "liga", "pnum";
   -webkit-font-smoothing: antialiased;
@@ -768,7 +766,6 @@ dl {
     margin: 0; }
 
 table {
-  -webkit-font-feature-settings: "kern", "liga", "tnum";
   -ms-font-feature-settings: "kern", "liga", "tnum";
   font-feature-settings: "kern", "liga", "tnum";
   border-collapse: collapse;
@@ -792,7 +789,6 @@ th {
   vertical-align: middle; }
 
 body {
-  -webkit-font-feature-settings: "kern", "liga", "pnum";
   -ms-font-feature-settings: "kern", "liga", "pnum";
   font-feature-settings: "kern", "liga", "pnum";
   -webkit-font-smoothing: antialiased;
@@ -1027,7 +1023,6 @@ picture {
     height: 1rem;
     border: 2px solid #212121; }
   .checkbox:checked:before {
-    -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
     height: .5rem;
     border-color: #009688;
@@ -1265,8 +1260,7 @@ input:checked + .toggle-switch {
     left: -65px;
     min-width: 150px;
     font-size: 0.5em;
-    -webkit-transform: translateY(10px);
-            transform: translateY(10px);
+    transform: translateY(10px);
     border-radius: 2px;
     transition: all .25s ease-out;
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28); }
@@ -1289,7 +1283,6 @@ input:checked + .toggle-switch {
   .info-icon i:hover .tooltip {
     opacity: 1;
     pointer-events: auto;
-    -webkit-transform: translateY(0px);
     transform: translateY(0px); }
 
 /* ============================================
@@ -1305,9 +1298,7 @@ input:checked + .toggle-switch {
   background: #F57C00;
   background: linear-gradient(to right, #F57C00 10%, rgba(255, 255, 255, 0) 42%);
   position: relative;
-  -webkit-animation: load-spinner 1.4s infinite linear;
   animation: load-spinner 1.4s infinite linear;
-  -webkit-transform: translateZ(0);
   transform: translateZ(0); }
 
 .loader:before {
@@ -1333,20 +1324,10 @@ input:checked + .toggle-switch {
   bottom: 0;
   right: 0; }
 
-@-webkit-keyframes load-spinner {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg); }
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg); } }
-
 @keyframes load-spinner {
   0% {
-    -webkit-transform: rotate(0deg);
     transform: rotate(0deg); }
   100% {
-    -webkit-transform: rotate(360deg);
     transform: rotate(360deg); } }
 
 /* ============================================
@@ -1426,8 +1407,8 @@ input:checked + .toggle-switch {
     list-style-type: disc; }
   .work--project-responsibility {
     margin-left: 20px;
-    font-size: 11px;
-    font-weight: 300; }
+    font-size: 0.8em;
+    line-height: 1.4em; }
 
 .education--title {
   border-bottom: 1px solid #cdcdcd;
