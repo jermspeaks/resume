@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="topicGraphEditor">
+<html>
   <head>
     <title>Jeremy Wong's Resume</title>
     <meta name="viewport" content="user-scalable = yes">
@@ -9,7 +9,7 @@
 
     <!-- Stylesheets -->
     <!-- <link rel='stylesheet' href='/css/lib.css'/> -->
-    <link rel='stylesheet' href='public/css/main.min.css'/>
+    <link rel='stylesheet' href='/css/main.min.css'/>
   </head>
   <body>
     <div class="container">
@@ -30,37 +30,37 @@
           <div class="title title--right">
             <div class="title--attr">
               <div class="title--attr__left">
-                <span class="fa-stack fa-lg">
+                <span class="fa-stack fa-sm">
                   <i class="fa fa-circle fa-stack-2x"></i>
                   <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
                 </span>
               </div>
               <div class="title--attr__right">
-                <label class="title--attr__title">Website</label>
+                <!-- <label class="title--attr__title">Website</label> -->
                 <span class="title--attr__website"><a href="http://craftbyzen.com" target="_blank">www.craftbyzen.com</a></span>
               </div>
             </div>
             <div class="title--attr">
               <div class="title--attr__left">
-                <span class="fa-stack fa-lg">
+                <span class="fa-stack fa-sm">
                   <i class="fa fa-circle fa-stack-2x"></i>
                   <i class="fa fa-mobile fa-stack-1x fa-inverse"></i>
                 </span>
               </div>
               <div class="title--attr__right">
-                <label class="title--attr__title">Mobile</label>
+                <!-- <label class="title--attr__title">Mobile</label> -->
                 <span class="title--attr__mobile">(510) 717-3581</span>
               </div>
             </div>
             <div class="title--attr">
               <div class="title--attr__left">
-                <span class="fa-stack fa-lg">
+                <span class="fa-stack fa-sm">
                   <i class="fa fa-circle fa-stack-2x"></i>
                   <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
                 </span>
               </div>
               <div class="title--attr__right">
-                <label class="title--attr__title">Email</label>
+                <!-- <label class="title--attr__title">Email</label> -->
                 <span class="title--attr__email"><a href="mailto:jermspeaks@gmail.com">jermspeaks@gmail.com</a></span>
               </div>
             </div>
@@ -76,7 +76,9 @@
                 <span class="profile--title__text main--title">PROFILE</span>
               </div>
               <div class="profile--desc">
-                <p class="profile--desc__text">I’m a former medical device engineer turned software engineer, developing skills in front-end development. Acquired skills in build tools, quick prototyping, new frameworks and cross-browser testing.</p>
+                <!-- <p class="profile--desc__text">Curiosity is my deep-rooted belief. I can talk about doing something, I can do something, or I can do both.</p> -->
+                <p class="profile--desc__text">I’m a former medical device engineer turned web developer. I have a knack for curiosity and persistence. In other words, I learn to be resilient by breaking things.</p>
+                <p class="profile--desc__text">I'm currently looking for web development roles all along the stack. The most important thing is I get to work on a product team.</p>
               </div>
             </article>
 
@@ -91,19 +93,27 @@
                 <div class="work--company__right">
                   <div className="work--company__info">
                     <span class="work--company__name"><strong>Inform</strong></span>
-                    <span class="work--company__title">Front-end Engineer</span>
+                    <span class="work--company__title">Senior Software Engineer</span>
                   </div>
                   <div class="work--desc">
                     <ul class="work--projects">
                       <li class="work--project">
-                        <span class="work--project__title"><strong>Digital Media Exchange</strong></span>
-                        <span class="work--project__subtitle"><em>Dashboard for customers and internal employees for all of Inform's Services</em></span>
+                        <span class="work--project__title"><strong>Video Player Suite</strong></span>
                         <ul class="work--project-responsibilities">
                           <li class="work--project-responsibility">
-                            <span>Joined my team as a lead front-end role reviewing design and interactions and developing the UI infrastructure in React</span>
+                            <span>Migrated Inform's video player from a prioritary to an open source library, Video.js. And migrated Inform's ad server, accomodating needs of ad operations.</span>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="work--project">
+                        <div><span class="work--project__title"><strong>Digital Media Exchange (DME)</strong></span></div>
+                        <div><span class="work--project__subtitle"><em>Inform's Publisher and Content Dashboard</em></span></div>
+                        <ul class="work--project-responsibilities">
+                          <li class="work--project-responsibility">
+                            <span>Architected and developed the front-end from the ground up for the publisher platform. Reviewed designs and accessed which technologies were appropriate to use.</span>
                           </li>
                           <li class="work--project-responsibility">
-                            <span>Facilitated usability testing to determine weak points of the application to improve in the next development cycle</span>
+                            <span>Facilitated team with code reviews. Created a generic library of UI components to work across teams. Ran usability tests to determine weak points of the application and design.</span>
                           </li>
                         </ul>
                       </li>
@@ -111,16 +121,17 @@
                         <span class="work--project__title"><strong>Wordpress Plugin</strong></span>
                         <ul class="work--project-responsibilities">
                           <li class="work--project-responsibility">
-                            <span>Developed Inform's Wordpress plugin for customers to embed videos without leaving the Wordpress environment</span>
+                            <span>Designed and developed Inform's Wordpress plugin.</span> 
+                            <span>Submitted plugin to Wordpress' VIP store and reviewed feedback from the Wordpress to verify the plugin was compliant.</span>
                           </li>
                         </ul>
                       </li>
                       <li class="work--project">
-                        <span class="work--project__title"><strong>Insights</strong></span>
-                        <span class="work--project__subtitle"><em>Dashboard for publishers to understand their content using Reverb's services</em></span>
+                        <div><span class="work--project__title"><strong>Insights</strong></span></div>
+                        <div><span class="work--project__subtitle"><em>Reverb's Publisher Dashboard</em></span></div>
                         <ul class="work--project-responsibilities">
                           <li class="work--project-responsibility">
-                            <span>Developed dashboard for Insights using Angular with customized data visualizations using d3</span>
+                            <span>Developed on the front-end application using Angular. Created charting components using d3</span>
                           </li>
                         </ul>
                       </li>
@@ -134,7 +145,7 @@
                 </div>
                 <div class="work--company__right">
                   <div className="work--company__info">
-                    <span class="work--company__name"><strong>Freelancing</strong></span>
+                    <span class="work--company__name"><strong>Freelance</strong></span>
                   </div>
                   <div class="work--desc">
                     <ul class="work--projects">
@@ -143,7 +154,7 @@
                         <!-- <span class="work--project__subtitle"><em>TBA</em></span> -->
                         <ul class="work--project-responsibilities">
                           <li class="work--project-responsibility">
-                            <span>Incorporated IBM Watson NLC services for Q&amp;A app for medicare information</span>
+                            <span>Leveraged IBM Watson NLC services for Q&amp;A app for medicare information.</span>
                           </li>
                         </ul>
                       </li>
@@ -152,7 +163,7 @@
                         <!-- <span class="work--project__subtitle"><em>TBA</em></span> -->
                         <ul class="work--project-responsibilities">
                           <li class="work--project-responsibility">
-                            <span>Developed chloropleth map with interactivity for learning about new Medicare changes</span>
+                            <span>Created interactive map to help the non-profit's outreach campaign.</span>
                           </li>
                         </ul>
                       </li>
@@ -169,19 +180,23 @@
                     <span class="work--company__name"><strong>Lumenous Device Technologies</strong></span>
                     <span class="work--company__title">Application Engineer</span>
                   </div>
-                  <div class="work--desc">
-                    <ul class="work--responsibilities">
-                      <li class="work--responsibility">
-                        <span>Facilitated job orders from raw material to end product to customer specs</span>
-                      </li>
-                      <li class="work--responsibility">
-                        <span>Engineered custom tooling and fixtures for manufacturing customer-specific parts</span>
-                      </li>
-                      <li class="work--responsibility">
-                        <span>Implemented lean manufacturing practices</span>
+                  <!-- <div class="work--desc">
+                    <ul class="work--projects">
+                      <li class="work--project">
+                        <ul class="work--project-responsibilities">
+                          <li class="work--project-responsibility">
+                            <span>Facilitated job orders from raw material to end product to customer specs</span>
+                          </li>
+                          <li class="work--project-responsibility">
+                            <span>Engineered custom tooling and fixtures for manufacturing customer-specific parts</span>
+                          </li>
+                          <li class="work--project-responsibility">
+                            <span>Implemented lean manufacturing practices</span>
+                          </li>
+                        </ul>
                       </li>
                     </ul>
-                  </div>
+                  </div> -->
                 </div>
               </div>
             </article>
@@ -232,23 +247,26 @@
                 <span class="projects--title__text main--title">Featured Projects</span>
               </div>
               <div class="projects--build">
-                <span class="projects--build__name"><strong>Coral Reef Game</strong></span>
+                <span class="projects--build__name"><strong>Garbage In Garbage Out</strong></span>
                 <ul class="projects--build__skills">
-                  <li class="projects--build__skill"><span class="projects--build__skill-name">Game Development</span></li>
-                  <li class="projects--build__skill"><span class="projects--build__skill-name">Environmentalism</span></li>
+                  <li class="projects--build__skill"><span class="projects--build__skill-name">Data Visualization</span></li>
                 </ul>
-                <span class="projects--build__website"><a href="http://goo.gl/k3N98x" target="blank">goo.gl/k3N98x</a></span>
+                <span class="projects--build__website"><a href="https://goo.gl/ZzphoK" target="blank">goo.gl/ZzphoK</a></span>
               </div>
               <div class="projects--build">
-                <span class="projects--build__name"><strong>Remembrance</strong></span>
+                <span class="projects--build__name"><strong>Smart Composter</strong></span>
                 <ul class="projects--build__skills">
-                  <li class="projects--build__skill"><span class="projects--build__skill-name">Social Spaces</span></li>
-                  <li class="projects--build__skill"><span class="projects--build__skill-name">Rails</span></li>
-                  <li class="projects--build__skill"><span class="projects--build__skill-name">Team Work</span></li>
+                  <li class="projects--build__skill"><span class="projects--build__skill-name">Webcomponents</span></li>
+                  <li class="projects--build__skill"><span class="projects--build__skill-name">UI Elements</span></li>
                 </ul>
-                <span class="projects--build__website"><a href="http://goo.gl/TMWJyV" target="blank">goo.gl/TMWJyV</a></span>
+                <span class="projects--build__website"><a href="https://goo.gl/Bc9VrK" target="blank">goo.gl/Bc9VrK</a></span>
+              </div>
+              <div class="projects--build">
+                <span class="projects--build__name"><strong>More Projects</strong></span>
+                <span class="projects--build__website"><a href="https://goo.gl/zqC6dz" target="blank">goo.gl/zqC6dz</a></span>
               </div>
             </article>
+
             <article class="volunteering">
               <div class="volunteering--title">
                 <span class="volunteering--title__text main--title">Volunteering</span>
@@ -298,7 +316,7 @@
                   <span class="volunteering--event__role">Volunteer</span>
                 </div>
               </div>
-              <div class="volunteering--event outer-container">
+              <!-- <div class="volunteering--event outer-container">
                 <div class="volunteering--event__left">
                   <span class="volunteering--event__year">2010-2012</span>
                 </div>
@@ -306,7 +324,7 @@
                   <span class="volunteering--event__name"><strong>QL+ (Quality of Life +)</strong></span>
                   <span class="volunteering--event__role">Treasurer</span>
                 </div>
-              </div>
+              </div> -->
             </article>
 
             <article class="links">
