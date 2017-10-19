@@ -1401,8 +1401,10 @@ input:checked + .toggle-switch {
   margin-bottom: 5px; }
   .work--project:last-child {
     margin-bottom: 0; }
-  .work--project__title, .work--project__subtitle {
-    font-size: 14px; }
+  .work--project__title {
+    font-size: 1em; }
+  .work--project__subtitle {
+    font-size: 0.8em; }
   .work--project-responsibilities {
     list-style-type: disc; }
   .work--project-responsibility {
@@ -1454,7 +1456,7 @@ input:checked + .toggle-switch {
 
 .stack--list__item {
   margin-bottom: 5px;
-  font-size: 14px; }
+  font-size: 0.8em; }
   .stack--list__item:last-child {
     margin-bottom: 0; }
 
@@ -1560,7 +1562,11 @@ article,
   display: block;
   margin-right: 2.35765%;
   width: 31.76157%;
-  margin-right: 0; }
+  margin-right: 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column; }
   .title--right:last-child {
     margin-right: 0; }
 
@@ -1576,43 +1582,35 @@ article,
   color: #616161; }
 
 .title--break {
-  margin-bottom: 1.5em; }
+  margin-bottom: 0.5em; }
 
 .title--attr {
-  margin-bottom: 0.5em;
-  max-width: 68em;
-  margin-left: auto;
-  margin-right: auto; }
-  .title--attr::after {
-    clear: both;
-    content: "";
-    display: table; }
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  margin: 0; }
 
 .title--attr:last-child {
   border-bottom: 0; }
 
 .title--attr__left {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 14.70196%;
+  -ms-flex: 0 1 50px;
+      flex: 0 1 50px;
   padding-top: 5px; }
-  .title--attr__left:last-child {
-    margin-right: 0; }
 
 .title--attr__right {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 82.94039%;
+  -ms-flex: 0 1 100%;
+      flex: 0 1 100%;
+  line-height: 32px;
   margin-right: 0; }
-  .title--attr__right:last-child {
-    margin-right: 0; }
 
 .title--attr__title {
   padding-top: 0.5em; }
 
-.title--attr__website, .title--attr__mobile, .title--attr__email {
+.title--attr__website,
+.title--attr__mobile,
+.title--attr__email {
   font-size: 12px; }
 
 .main-left {
@@ -1638,7 +1636,7 @@ article,
 
 .profile,
 .work {
-  margin-bottom: 24px; }
+  margin-bottom: 0.5em; }
 
 .stack,
 .projects,
@@ -1698,14 +1696,14 @@ article,
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 57.35098%; }
+    width: 65.88078%; }
     .main-left:last-child {
       margin-right: 0; }
   .main-right {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 40.29137%;
+    width: 31.76157%;
     margin-right: 0; }
     .main-right:last-child {
       margin-right: 0; }

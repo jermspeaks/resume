@@ -48,52 +48,61 @@ article,
   padding: 5px;
 }
 
-.title {
-  &--left {
-    @include span-columns(8);
-  }
-  &--right {
-    @include span-columns(4);
-    margin-right: 0;
-  }
-  &--desc__name {
-    font-size: $large-font-size;
-  }
-  &--desc__subtitle {
-    font-size: $medium-font-size;
-    color: $gray-dark-2;
-  }
-  &--desc__address {
-    font-size: $small-font-size;
-    color: $gray-dark-2;
-  }
-  &--break {
-    margin-bottom: $margin-bottom-large;
-  }
-  &--attr {
-    margin-bottom: 0.5em;
-    @include outer-container;
-  }
-  &--attr:last-child {
-    border-bottom: 0;
-  }
-  &--attr__left {
-    @include span-columns(2);
-    padding-top: 5px;
-  }
-  &--attr__right {
-    @include span-columns(10);
-    margin-right: 0;
-  }
-  &--attr__title {
-    padding-top: 0.5em;
-  }
-  &--attr__website,
-  &--attr__mobile,
-  &--attr__email {
-    font-size: 12px;
-  }
+
+.title--left {
+  @include span-columns(8);
 }
+.title--right {
+  @include span-columns(4);
+  margin-right: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.title--desc__name {
+  font-size: $large-font-size;
+}
+.title--desc__subtitle {
+  font-size: $medium-font-size;
+  color: $gray-dark-2;
+}
+.title--desc__address {
+  font-size: $small-font-size;
+  color: $gray-dark-2;
+}
+.title--break {
+  margin-bottom: 0.5em;
+}
+.title--attr {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  // margin-bottom: 0.5em;
+  // @include outer-container;
+}
+.title--attr:last-child {
+  border-bottom: 0;
+}
+.title--attr__left {
+  flex: 0 1 50px;
+  // @include span-columns(2);
+  padding-top: 5px;
+}
+.title--attr__right {
+  flex: 0 1 100%;
+  line-height: 32px;
+  // @include span-columns(10);
+  margin-right: 0;
+}
+.title--attr__title {
+  padding-top: 0.5em;
+}
+.title--attr__website,
+.title--attr__mobile,
+.title--attr__email {
+  font-size: 12px;
+}
+
 
 .main-left {
   @include span-columns(8);
@@ -110,7 +119,7 @@ article,
 
 .profile,
 .work {
-  margin-bottom: 24px;
+  margin-bottom: 0.5em;
 }
 
 .stack,
@@ -178,10 +187,10 @@ article,
     }
   }
   .main-left {
-  @include span-columns(7);
+  @include span-columns(8);
   }
   .main-right {
-    @include span-columns(5);
+    @include span-columns(4);
     margin-right: 0;
   }
   .main--title {
