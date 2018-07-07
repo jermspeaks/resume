@@ -4,7 +4,8 @@
   "description": "UI to edit topic graph",
   "main": "index.js",
   "scripts": {
-    "test": "npm start"
+    "test": "npm start",
+    "start": "gulp serve"
   },
   "repository": {
     "type": "git",
